@@ -9,6 +9,7 @@ Testare nel browser.*/
 
 const express = require('express')
 const app = express()
+const postsController = require('./controllers/posts.js')
 
 const port = 3000
 app.listen(port, () => {
@@ -17,3 +18,4 @@ app.listen(port, () => {
 app.get('/', (req, res) => {
 	res.send('<h1>Benvenuto nel mio blog!</h1>')
 })
+app.get('/posts', postsController.index)
