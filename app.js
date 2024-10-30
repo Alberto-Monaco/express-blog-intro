@@ -10,3 +10,14 @@ Bonus
 Spostiamo l’array dei post in un file separato da importare poi dentro il controller
 Creare una nuova rotta con cui stampare la lista in html come ul
 Create una pagina statica html da cui far partire una chiamata ajax per consumare il vostro endpoint json.*/
+
+const express = require('express')
+const app = express()
+
+const port = 3000
+app.listen(port, () => {
+	console.log(`Server in ascolto sulla porta http://127.0.0.1:${port}`)
+})
+app.get('/', (req, res) => {
+	res.send('<h1>Benvenuto nel mio blog!</h1>')
+})
