@@ -11,6 +11,8 @@ const express = require('express')
 const app = express()
 const postsController = require('./controllers/posts.js')
 
+app.use(express.static('public'))
+
 const port = 3000
 app.listen(port, () => {
 	console.log(`Server in ascolto sulla porta http://127.0.0.1:${port}`)
